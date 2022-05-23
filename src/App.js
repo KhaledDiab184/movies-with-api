@@ -30,18 +30,19 @@ function App() {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyles />
       <MainContainer>
-      <ThemButton onClick={toggleTheme}>
+      
+        <Nav />
+         <ThemButton onClick={toggleTheme}>
             {isDarkTheme ? (
               <span aria-label="Light mode" role="img">
-                Light Mode
+                Light Mode -> &#x1F31E;
               </span>
             ) : (
               <span aria-label="Dark mode" role="img">
-                Dark Mode
+                Dark Mode -> &#x1F31A;
               </span>
             )}
-          </ThemButton>
-        <Nav />
+          </ThemButton
         
         <Routes>
           <Route path="/" element={<HomeScreen />}/>
