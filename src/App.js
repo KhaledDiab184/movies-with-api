@@ -44,7 +44,7 @@ function App() {
               </span>
             )}
           </ThemButton>
-          </Nav>
+         </Nav>
         <Routes>
           <Route path="/" element={<HomeScreen />}/>
           <Route path="/moves/:id" element={ <MovieScreen />}/>
