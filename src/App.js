@@ -31,7 +31,7 @@ function App() {
       <GlobalStyles />
       <MainContainer>
       
-        <Nav />
+        <Nav>
          <ThemButton onClick={toggleTheme}>
             {isDarkTheme ? (
               <span aria-label="Light mode" role="img">
@@ -43,7 +43,7 @@ function App() {
               </span>
             )}
           </ThemButton
-        
+        </Nav>
         <Routes>
           <Route path="/" element={<HomeScreen />}/>
           <Route path="/moves/:id" element={ <MovieScreen />}/>
