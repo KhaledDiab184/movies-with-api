@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router";
 
 function App() {
+
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => {
@@ -26,28 +27,27 @@ function App() {
       setTheme("dark");
     }
   }, []);
+  
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyles />
       <MainContainer>
-      
         <Nav>
-         <ThemButton onClick={toggleTheme}>
+        <ThemButton onClick={toggleTheme}>
             {isDarkTheme ? (
               <span aria-label="Light mode" role="img">
-                Light Mode -> &#x1F31E;
+                Light Mode &#x1F31E;
               </span>
             ) : (
               <span aria-label="Dark mode" role="img">
-                Dark Mode -> &#x1F31A;
+                Dark Mode &#x1F31A;
               </span>
             )}
-          </ThemButton
-        </Nav>
+          </ThemButton>
+          </Nav>
         <Routes>
           <Route path="/" element={<HomeScreen />}/>
           <Route path="/moves/:id" element={ <MovieScreen />}/>
-
         </Routes>
       </MainContainer>
     </ThemeProvider>
